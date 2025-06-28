@@ -1,0 +1,260 @@
+.hero {
+  height: 100vh;
+  background-image: url('../../image/Index/IndexBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; /* Inherit background image from .hero */
+  filter: blur(10px); /* Apply blur effect */
+  z-index: -1; /* Ensure the blur stays behind the content */
+}
+
+.content {
+  z-index: 2; /* Content should be above the blurred background */
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+h1 span {
+  color: #ffeb3b;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 25px #ffeb3b, 0 0 5px #ffeb3b;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+  background-color: #ffeb3b;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #1d1d1d;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.btn:hover {
+  background-color: #fdd835;
+}
+
+.Support {
+  position: absolute;
+  bottom: 220px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-size: 1rem;
+}
+
+.support-text {
+  font-family: Mulish, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.support-logos {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+}
+
+.support-logos img {
+  width: 120px;
+  height: 70px;
+}
+
+.support-logos .CodeDex {
+  margin-top: 10px;
+  width: 70px;
+  height: 80px;
+  margin-left: 25px;
+}
+
+@media (max-width: 768px) {
+  .Support {
+    bottom: 20px;
+  }
+
+  .support-logos img {
+    width: 80px;
+    height: 100px;
+  }
+
+  .support-text {
+    font-size: 1rem;
+  }
+}
+
+        .course-section {
+      padding: 40px;
+      text-align: center;
+      font-family: 'Mulish', sans-serif;
+      background-color: #020617;
+      color: #fff;
+    }
+
+    .course-section h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .course-section p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .course-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);  /* 3 items per row */
+      gap: 20px;  /* Space between course cards */
+      justify-items: center;   /* Center items horizontally */
+      align-items: center;     /* Center items vertically */
+      margin: 0 auto;          /* Center the grid container itself horizontally */
+      max-width: 1200px;       /* Optional: Set a max width for the container */
+    }
+
+    .course-card {
+      background-color: #020617;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+       border: 1px solid white; /* Added white 1px border */
+    }
+
+    .course-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px; /* Adjusted height for better fitting */
+    }
+
+    .course-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 78%; /* Ensure the image covers the entire area */
+      background-size: cover; /* Ensures the image fills the area */
+      background-position: center; /* Keeps the image centered */
+      background-repeat: no-repeat; /* Prevents image repetition */
+    }
+
+    .background {
+      z-index: 1; /* Background image */
+    }
+
+    .foreground {
+      z-index: 2; /* Foreground image */
+      opacity: 0.9; /* You can adjust the opacity for better blending */
+      background-size: 170%; /* Slight zoom effect for foreground */
+      background-position: center; /* Keeps the foreground image centered */
+    }
+     .cpp {
+      z-index: 2; /* Foreground image */
+      opacity: 0.9; /* You can adjust the opacity for better blending */
+      background-size: 260%; /* Slight zoom effect for foreground */
+      background-position: center; /* Keeps the foreground image centered */
+    }
+
+
+     .cpp {
+      z-index: 2; /* Foreground image */
+      opacity: 0.9; /* You can adjust the opacity for better blending */
+      background-size: 260%; /* Slight zoom effect for foreground */
+      background-position: center; /* Keeps the foreground image centered */
+    }
+
+
+    .background {
+      z-index: 2; /* Foreground image */
+      opacity: 0.9; /* You can adjust the opacity for better blending */
+      background-size: 100%; /* Slight zoom effect for foreground */
+      background-position: center; /* Keeps the foreground image centered */
+    }
+
+    .course-info {
+      padding: 10px; /* Reduced padding */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Ensure text is aligned with top */
+      margin-top: -20px;  /* Negative margin to make the text overlap slightly with the background image */
+    }
+
+    .course-info h5 {
+      font-size: 1rem;
+      color: #ffeb3b;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 0;  /* Remove margin */
+    }
+
+    .course-info h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      position: relative;
+      margin-top: 5px;  /* Little space between "COURSE" and the title */
+      margin-bottom: 25px;
+    }
+
+    .course-info p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .level {
+      text-align: left;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background-color: #1e293b;
+      border-radius: 25px;
+      width: 170px;
+      padding: 10px;
+    }
+
+ 
+
+    /* Media Query for smaller screens */
+    @media (max-width: 1200px) {
+      .course-cards {
+        grid-template-columns: repeat(2, 1fr);  /* 2 items per row on smaller screens */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .course-cards {
+        grid-template-columns: 1fr;  /* 1 item per row on very small screens */
+      }
+    }
