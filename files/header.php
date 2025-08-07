@@ -62,6 +62,7 @@
       background: transparent;
     }
 
+    /* Default dropdown styles for vertical layout */
     .dropdown-menu {
       top: 100%;
       left: 50%;
@@ -89,24 +90,22 @@
       transform: translateX(-50%) translateY(0);
     }
 
-    /* Horizontal layout for dropdown menu */
-  /* Horizontal layout for dropdown menu */
-.dropdown-menu.mega-menu {
-  display: flex;
-  flex-direction: row; /* Make items horizontal */
-  justify-content: space-between;
-  gap: 50px;
-  min-width: 1000px;
-  max-width: 90vw;
-  flex-wrap: wrap; /* Allows wrapping if content is too wide */
-}
+    /* 4 Box Grid Layout for the mega-menu */
+    .dropdown-menu.mega-menu {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 equal boxes */
+      gap: 20px;
+      min-width: 1200px;
+      padding: 20px;
+    }
 
-/* Fix columns in mega menu */
-.dropdown-menu.mega-menu > div {
-  flex: 1;
-  min-width: 200px;
-  max-width: 300px;
-}
+    /* Style each box in the mega menu */
+    .dropdown-menu .box {
+      padding: 20px;
+      background-color: #1a1c22;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
     .dropdown-menu h4 {
       color: #999;
@@ -115,7 +114,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 600;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       padding-bottom: 6px;
       white-space: nowrap;
     }
@@ -147,7 +146,7 @@
       gap: 12px;
       margin-bottom: 16px;
       padding-bottom: 8px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .recommended img {
@@ -155,7 +154,7 @@
       height: 48px;
       border-radius: 10px;
       object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
 
     .btn-signup {
@@ -183,9 +182,10 @@
         display: block !important;
       }
 
+      /* Convert mega menu to vertical on mobile */
       .dropdown-menu.mega-menu {
         display: block !important;
-        flex-direction: column !important;
+        grid-template-columns: 1fr; /* Stack vertically on mobile */
         gap: 20px;
       }
     }
@@ -207,35 +207,36 @@
           </a>
           <div class="dropdown-hover-zone"></div>
           <div class="dropdown-menu mega-menu">
-  <div>
-    <h4>DATA SCIENCE</h4>
-    <a href="#">Python</a>
-    <a href="#">Intermediate Python</a>
-    <a href="#">NumPy</a>
-    <a href="#">SQL</a>
-    <a href="#">Gen AI</a>
-  </div>
-  <div>
-    <h4>WEB DEV</h4>
-    <a href="#">HTML</a>
-    <a href="#">CSS</a>
-    <a href="#">JavaScript</a>
-    <a href="#">Intermediate JavaScript</a>
-    <a href="#">React</a>
-    <a href="#">p5.js</a>
-    <a href="#" class="club">Node.js CLUB</a>
-  </div>
-  <div>
-    <h4>TOOLS</h4>
-    <a href="#">Command Line</a>
-    <a href="#">Git & GitHub</a>
-    <h4 class="mt-3">COMPUTER SCIENCE</h4>
-    <a href="#">C++</a>
-    <a href="#">Java</a>
-    <a href="#" class="club">Data Structures & Algorithms</a>
-  </div>
-</div>
-
+            <div class="box">
+              <h4>DATA SCIENCE</h4>
+              <a href="#">Python</a>
+              <a href="#">Intermediate Python</a>
+              <a href="#">NumPy</a>
+              <a href="#">SQL</a>
+              <a href="#">Gen AI</a>
+            </div>
+            <div class="box">
+              <h4>WEB DEV</h4>
+              <a href="#">HTML</a>
+              <a href="#">CSS</a>
+              <a href="#">JavaScript</a>
+              <a href="#">Intermediate JavaScript</a>
+              <a href="#">React</a>
+              <a href="#">p5.js</a>
+              <a href="#" class="club">Node.js CLUB</a>
+            </div>
+            <div class="box">
+              <h4>TOOLS</h4>
+              <a href="#">Command Line</a>
+              <a href="#">Git & GitHub</a>
+            </div>
+            <div class="box">
+              <h4>COMPUTER SCIENCE</h4>
+              <a href="#">C++</a>
+              <a href="#">Java</a>
+              <a href="#" class="club">Data Structures & Algorithms</a>
+            </div>
+          </div>
         </li>
 
         <!-- Practice -->
@@ -268,8 +269,10 @@
         <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
       </ul>
     </div>
-
-    <button class="btn btn-signup">Sign Up</button>
+  <div class="d-flex gap-2">
+  <button class="btn btn-outline-light fw-bold">Login</button>
+  <button class="btn btn-signup">Sign Up</button>
+</div>
   </div>
 </nav>
 
