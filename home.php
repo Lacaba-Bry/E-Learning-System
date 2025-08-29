@@ -82,9 +82,11 @@
       height: 100%;
     }
 
-    .explore-box img {
-      width: 24px;
-      margin-bottom: 10px;
+   .explore-box img {
+    width: 180px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
     }
 
     .sidebar {
@@ -140,6 +142,10 @@
     }
   </style>
 </head>
+<header>
+    <?php include('files/header.php'); ?>
+  </header>
+
 <body>
 
 <div class="container p-4 px-5">
@@ -168,40 +174,44 @@
         </div>
       </div>
 
-      <!-- Explore more -->
-      <h5 class="section-title">Explore more</h5>
-      <div class="row g-3">
-        <div class="col-md-6 col-lg-3">
-          <div class="explore-box text-center">
-            <img src="images/snake.png" alt="Challenge Icon">
-            <h6>Challenge Packs</h6>
-            <p>Practice what you learned with bite-sized code challenges.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="explore-box text-center">
-            <img src="images/rocket.png" alt="Project Icon">
-            <h6>Project Tutorials</h6>
-            <p>Explore fun, step-by-step projects from beginner to advanced.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="explore-box text-center">
-            <img src="images/egg.png" alt="30Nites Icon">
-            <h6>#30NitesOfCode</h6>
-            <p>Commit to 30 days of learning and building—while raising a pet!</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="explore-box text-center">
-            <img src="images/monitor.png" alt="Builds Icon">
-            <h6>Builds</h6>
-            <p>Create and share code snippets and projects in the browser.</p>
-          </div>
-        </div>
-      </div>
+<!-- Explore more -->
+<h5 class="section-title">Explore more</h5>
 
-    </div>
+      <div class="row g-3">
+  <div class="col-md-6 col-lg-3">
+    <a href="lecture.php" class="text-decoration-none">
+      <div class="explore-box text-center">
+        <img src="asset/image/Index/home/lecture.gif" alt="Lecture Icon">
+        <h6>Lecture Packs</h6>
+        <p>Deepen your knowledge with guided lectures that explain complex topics step by step.</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-6 col-lg-3">
+    <a href="Challenge.php" class="text-decoration-none">
+      <div class="explore-box text-center">
+        <img src="asset/image/Index/home/challenge.gif" alt="Challenge Icon">
+        <h6>Challenge Packs</h6>
+        <p>Practice what you learned with bite-sized code challenges</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-6 col-lg-3">
+    <a href="pet.php" class="text-decoration-none">
+      <div class="explore-box text-center">
+        <img src="asset/image/Index/home/pet.gif" alt="Pet Icon">
+        <h6>Level Up your Pet</h6>
+        <p>Grow your companion by earning XP and unlocking fun evolutions.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+</div>
 
     <!-- Sidebar -->
     <div class="col-lg-3 sidebar">
